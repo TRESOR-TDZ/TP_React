@@ -8,8 +8,8 @@ const CreateClient = () => {
     const navigate = useNavigate();
 
     const handleCreate = async () => {
-        await axios.post('http;//localhost:3001/clients', client); // ajout client
-        navigate('clients', { replace: true}); //apres ajout retour a la liste
+        await axios.post('http://localhost:3001/clients', client); // ajout client
+        navigate('/clients', { replace: true}); //apres ajout retour a la liste
     };
 
     return(

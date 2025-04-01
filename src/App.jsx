@@ -14,10 +14,10 @@ const App = () => {
   return (
     <Router>
       <Routes>
-      <Route path="/clients" element={<ClientsList/>} />
-      <Route path="/clients/create" element={<CreateClient/>} />
-      <Route path="/clients/:id" element={<ClientDetails/>} />
-      <Route path="/clients/:id/update" element={<UpdateClient/>} />
+        <Route path="/clients" element={<ClientsList/>} />
+        <Route path="/clients/create" element={<CreateClient/>} />
+        <Route path="/clients/:id" element={<ClientDetails/>} />
+        <Route path="/clients/:id/update" element={<UpdateClient/>} />
       </Routes>
     </Router>
   );

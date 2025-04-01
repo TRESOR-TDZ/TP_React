@@ -1,22 +1,22 @@
 {
-    "clients": [
+  "clients": [
     {
-        "id": 1,
-        "nom": "Client 1",
-        "adresse": "Adresse 1",
-        "tel": "123456789"
+      "id": "1",
+      "nom": "Client ",
+      "adresse": "Adresse ",
+      "tel": "123456781"
     },
     {
-        "id": 2,
-        "nom": "Client 2",
-        "adresse": "Adresse 2",
-        "tel": "987654321"
+      "id": "2",
+      "nom": "Client ",
+      "adresse": "Adresse 2",
+      "tel": "987654321"
     },
     {
-        "id": 3,
-        "nom": "Client 3",
-        "adresse": "Adresse 2",
-        "tel": "965821476"
+      "id": "002d",
+      "nom": "murielle1",
+      "adresse": "akwa1",
+      "tel": "62839205"
     }
-    ]
+  ]
 }

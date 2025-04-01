@@ -1,5 +1,5 @@
 // ClientList.js
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect} from 'react';
 import { Link, /*useNavigate*/} from 'react-router-dom';
 import axios from 'axios';
 
@@ -8,7 +8,7 @@ const ClientList = () => {
     // const navigate = useNavigate();
 
     const fetchData = async () => {
-        const response = await axios.get('htpp://localhost:3001/clients');
+        const response = await axios.get('http://localhost:3001/clients');
         setClients(response.data); //chargement du resultat de la requette
     };
 
@@ -16,9 +16,9 @@ const ClientList = () => {
         fetchData(); // lancer la fonction fecth une seulle fois au premier rendu
     }, []);
 
-    const handleDelete = async () => {
+    const handleDelete = async (id) => {
         // const handleDelete = async (id) => {
-        await axios.delete('http://localhost:3001/clients/${id}');
+        await axios.delete(`http://localhost:3001/clients/${id}`);
         fetchData();
     }; //axios.delete pour supprimer le client identifie par id
 
@@ -26,7 +26,7 @@ const ClientList = () => {
         <div>
             <center>
                 <h1> Liste des clients </h1>
-                <Link to={'/clients/create'}><button>Ajouter</button></Link><br/><br/>
+                <Link to={`/clients/create`}><button>Ajouter</button></Link><br/><br/>
                 <table style={{border:'1px solid black'}}>
                     <thead>
                         <tr>
@@ -39,13 +39,13 @@ const ClientList = () => {
                     <tbody>
                     {clients.map(client => ( // pour chaque client
                         <tr key={client.id}>
-                            <td><Link to={'/clients/${client.id}'}> {client.nom} </Link></td>
+                            <td><Link to={`/clients/${client.id}`}> {client.nom} </Link></td>
                             <td> {client.adresse}</td>
                             <td> {client.tel}</td>
                             {/* colonne operation(modifier, supprimer) */}
-                            <td><Link to={'/clients/${client.id}/update'}> 
+                            <td><Link to={`/clients/${client.id}/update`}> 
                                 <button>Modifier</button></Link>
-                                <button onClick={()=>handleDelete}>Supprimer</button>
+                                <button onClick={()=> handleDelete(client.id)}>Supprimer</button>
                             </td>
                         </tr>
                     ))}
