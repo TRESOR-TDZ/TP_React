@@ -1,8 +1,8 @@
 // App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css'
-
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 //importation des composants
 import ClientsList from './components/ClientsList';
 import CreateClient from './components/CreateClient';

@@ -17,10 +17,10 @@ const CreateClient = () => {
             <center>
             <h1> creer un nouveau client</h1>
             <form>
-                <label> Nom du client : </label>
-                <input type="text" value={client.nom} onChange={(e) => setClient({...client, nom: e.target.value})}></input> <br/><label>adresse : </label>
-                <input type="text" value={client.adresse} onChange={(e) => setClient({...client, adresse: e.target.value})}></input> <br/><label>telephone : </label>
-                <input type="text" value={client.tel} onChange={(e) => setClient({...client, tel: e.target.value})}></input> <br/><button type="button" onClick={handleCreate}>creer</button>
+                <label className="form-label"> Nom du client </label>
+                <input type="text" value={client.nom} onChange={(e) => setClient({...client, nom: e.target.value})} className="form-control form-control-green"></input> <br/><label>adresse : </label>
+                <input type="text" value={client.adresse} onChange={(e) => setClient({...client, adresse: e.target.value})} className="form-control form-control-green"></input> <br/><label>telephone : </label>
+                <input type="text" value={client.tel} onChange={(e) => setClient({...client, tel: e.target.value})} className="form-control form-control-green"></input> <br/><button type="button" className="btn btn-success" onClick={handleCreate}>creer</button>
             </form>
             </center>
         </div>  

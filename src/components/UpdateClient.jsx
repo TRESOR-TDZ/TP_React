@@ -29,13 +29,13 @@ const UpdateClient = () => {
         <div>
             <h1>Mettre à jour le client</h1>
             <form>
-                <label>Nom du client:</label>
-                <input type="text" value={client.nom} onChange={(e) => setClient({ ...client, nom: e.target.value })} /><br/>
-                <label>Adresse:</label>
-                <input type="text" value={client.adresse} onChange={(e) => setClient({...client, adresse: e.target.value })} /><br/>
-                <label>Téléphone:</label>
-                <input type="text" value={client.tel} onChange={(e) => setClient({ ...client, tel: e.target.value })} /><br/>
-                <button onClick={handleUpdate}>Mettre à jour</button>
+                <label className="form-label">Nom du client:</label>
+                <input type="text" value={client.nom} onChange={(e) => setClient({ ...client, nom: e.target.value })} className="form-control form-control-green"/><br/>
+                <label className="form-label">Adresse:</label>
+                <input type="text" value={client.adresse} onChange={(e) => setClient({...client, adresse: e.target.value })} className="form-control form-control-green"/><br/>
+                <label className="form-label">Téléphone:</label>
+                <input type="text" value={client.tel} onChange={(e) => setClient({ ...client, tel: e.target.value })} className="form-control form-control-green"/><br/>
+                <button className="btn btn-success" onClick={handleUpdate} >Mettre à jour</button>
             </form>
         </div>
     );
